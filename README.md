@@ -9,5 +9,3 @@ This is a simple web page that demonstrates basic form validation using HTML, CS
 - Displays error messages for invalid inputs.
 - Alerts the user on successful submission.
 
-## 📁 Project Structure
-
