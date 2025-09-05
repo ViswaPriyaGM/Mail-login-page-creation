@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2_viswapriya</title>
+    <style>
+        #emailAlert{
+            visibility: hidden;
+        }
+        #passwordAlert{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div >Email</div>
+    <input id="mail" > </input>
+    <div id="emailAlert" style="color:red">please enter your valid email</div>
+
+
+    <div>Password</div>
+    <input type='password' id="password"></input>
+    <div id="passwordAlert" style="color:red"> please enter a password</br>min length should be 8character</div>
+    
+    <div><button type="button" id="submitbutton">submit</button></div>
+
+    <script>
+        
+        document.getElementById("submitbutton").addEventListener('click',function(){
+             var mailId=document.getElementById('mail').value;
+             var password=document.getElementById('password').value;
+             
+             if(mailId === '' || !mailId.includes('@') || !mailId.includes('.')) {
+            document.getElementById('emailAlert').style.visibility = 'visible';
+            } 
+            else if(password===''|| password.length<8){
+                document.getElementById('passwordAlert').style.visibility='visible';
+            }
+            else {
+            alert("submited successfully");
+            }
+    
+        })
+        
+    </script>
+
+
+</body>
+</html>
